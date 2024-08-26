@@ -6,6 +6,15 @@
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
         <title>kephalosk | Testimonials Grid Section</title>
         <style>
+            :root {
+                --moderate-violet: hsl(263, 55%, 52%);
+                --very-dark-grayish-blue: hsl(217, 19%, 35%);
+                --very-dark-blackish-blue: hsl(219, 29%, 14%);
+                --white: hsl(0, 0%, 100%);
+                --light-gray: hsl(0, 0%, 81%);
+                --light-grayish-blue: hsl(210, 46%, 95%);
+            }
+
             .attribution {
                 font-size: 11px;
                 text-align: center;
@@ -14,13 +23,87 @@
             .attribution a {
                 color: hsl(228, 45%, 44%);
             }
+
+            .gridAuthorBar {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+            }
+
+            .gridAuthorBarNameColumn {
+                color: var(--white);
+                display: flex;
+                flex-direction: column;
+            }
+
+            .gridAuthorBarNameColumnName {
+
+            }
+
+            .gridAuthorBarNameColumnSubline {
+            }
+
+            .gridLeft {
+                display: grid;
+                grid-template-rows: 50% 50%;
+            }
+
+            .gridLeftBottom {
+                display: grid;
+                grid-template-columns: 34% 66%;
+            }
+
+            .gridLeftTop {
+                display: grid;
+                grid-template-columns: 66% 34%;
+            }
+
+            .gridLeftTopLeft {
+                max-height: 100%;
+            }
+
+            .gridLeftTopRight {
+                max-height: 100%;
+            }
+
+            .cardBox {
+                background-color: var(--moderate-violet);
+                border-radius: 10px;
+                box-shadow: 32px 32px 40px -35px var(--very-dark-grayish-blue);
+                margin: 16px 12px;
+                padding: 24px 32px 32px 32px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            body {
+                background-color: var(--light-grayish-blue);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 16vh 11vw;
+            }
+
+            img {
+                border-radius: 50px;
+                height: 32px;
+                margin-right: 16px;
+                width: auto;
+            }
+
+            main {
+                display: grid;
+                grid-template-columns: 75% 25%;
+            }
         </style>
     </head>
     <body>
         <main>
             <div class="gridLeft">
                 <div class="gridLeftTop">
-                    <div class="gridLeftTopLeft">
+                    <div class="gridLeftTopLeft cardBox">
                         <div class="gridAuthorBar">
                             <img src="images/image-daniel.jpg" alt="image of Daniel">
                             <div class="gridAuthorBarNameColumn">
@@ -36,7 +119,7 @@
                             The next 12 weeks was the best - and most grueling - time of my life. Since completing
                             the course, I’ve successfully switched careers, working as a Software Engineer at a VR startup. ”</p>
                     </div>
-                    <div class="gridLeftTopRight">
+                    <div class="gridLeftTopRight cardBox">
                         <div class="gridAuthorBar">
                             <img src="images/image-jonathan.jpg" alt="image of Jonathan">
                             <div class="gridAuthorBarNameColumn">
@@ -50,7 +133,7 @@
                     </div>
                 </div>
                 <div class="gridLeftBottom">
-                    <div class="gridLeftBottomLeft">
+                    <div class="gridLeftBottomLeft cardBox">
                         <div class="gridAuthorBar">
                             <img src="images/image-jeanette.jpg" alt="image of Jeanette">
                             <div class="gridAuthorBarNameColumn">
@@ -62,7 +145,7 @@
                         <p>“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
                             while doing something I love. ”</p>
                     </div>
-                    <div class="gridLeftBottomRight">
+                    <div class="gridLeftBottomRight cardBox">
                         <div class="gridAuthorBar">
                             <img src="images/image-patrick.jpg" alt="image of Patrick">
                             <div class="gridAuthorBarNameColumn">
@@ -79,7 +162,7 @@
                     </div>
                 </div>
             </div>
-            <div class="gridRight">
+            <div class="gridRight cardBox">
                 <div class="gridAuthorBar">
                     <img src="images/image-kira.jpg" alt="image of Kira">
                     <div class="gridAuthorBarNameColumn">
